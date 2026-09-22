@@ -4,6 +4,12 @@
     <Platform Name="ARM64" />
   </Configurations>
   <Folder Name="/.github/" />
-  <Project Path="ActivityMonitor.Core/ActivityMonitor.Core.csproj" />
-  <Project Path="ActivityMonitor.UI/ActivityMonitor.UI.csproj" />
+  <Project Path="ActivityMonitor.Core/ActivityMonitor.Core.csproj">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="ActivityMonitor.UI/ActivityMonitor.UI.csproj">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
 </Solution>

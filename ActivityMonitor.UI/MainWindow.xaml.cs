@@ -122,7 +122,7 @@ public sealed partial class MainWindow : Window
         {
             "name" => (a, b) => string.Compare(a.Info.Name, b.Info.Name, StringComparison.OrdinalIgnoreCase),
             "pid" => (a, b) => a.Pid.CompareTo(b.Pid),
-            "cpu" => (a, b) => a.Info.CpuPercent.CompareTo(b.Info.CpuPercent),
+            "cpu" => (a, b) => Math.Round(a.Info.CpuPercent, 1).CompareTo(Math.Round(b.Info.CpuPercent, 1)),
             "time" => (a, b) => a.Info.CpuTime.CompareTo(b.Info.CpuTime),
             "threads" => (a, b) => a.Info.ThreadCount.CompareTo(b.Info.ThreadCount),
             _ => (a, b) => a.Info.MemoryBytes.CompareTo(b.Info.MemoryBytes),

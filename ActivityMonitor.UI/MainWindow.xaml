@@ -70,6 +70,12 @@
                   ItemsSource="{x:Bind Rows}"
                   SelectionMode="Single"
                   SelectionChanged="ProcessList_SelectionChanged">
+            <!--追加: 行の移動・追加・削除のアニメーションを無効化-->
+            <ListView.ItemContainerTransitions>
+                <TransitionCollection />
+            </ListView.ItemContainerTransitions>
+            
+            
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem" BasedOn="{StaticResource DefaultListViewItemStyle}">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
